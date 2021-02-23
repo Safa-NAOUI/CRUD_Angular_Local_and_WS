@@ -1,0 +1,28 @@
+img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .table td ,tr, th {
+    text-align: center;   
+    vertical-align: middle;
+
+ }
+
+ .zoom {
+  padding: 50px;
+  background-color: green;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+ .zoom:hover {
+  transform: scale(2); /* (200% zoom)*/
+}
+
+img:hover {
+  transform: scale(2.8);
+  }

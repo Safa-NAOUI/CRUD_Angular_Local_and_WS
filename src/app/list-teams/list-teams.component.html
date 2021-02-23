@@ -1,0 +1,26 @@
+<h1 class="text-center">List of Players</h1>
+<br><br>
+<div  style="width: 70%;" class="container-fluid" >
+    <div *ngIf="listOfTeams; then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock> 
+
+<table  class="table" border="1" align="center">
+    <thead class="thead-dark">  
+<tr>
+    <th><h4></h4></th><th><h4>Number</h4></th><th><h4>Name</h4></th><th><h4>Team</h4></th><th><h4>Picture</h4></th></tr>
+    </thead>
+<tr  *ngFor="let player of listOfTeams; let index = index;">
+    <td>{{index}}</td>
+    <td> {{player.number}}</td>
+    <td> {{player.name}}</td>
+    <td> {{player.team}}</td>
+    <td><img alt="player.name" src="{{player.picture}}" /> </td>
+
+</tr>
+</table>
+    </ng-template>
+    <br><br>
+<ng-template #elseBlock> <div class="btn btn-danger">Liste Empty</div> </ng-template>
+
+</div>
